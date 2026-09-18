@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Day3 extends StatelessWidget {
-  const Day3({super.key});
+   Day3({super.key});
+
+  TextEditingController _controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +32,7 @@ class Day3 extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: TextFormField(
+                controller: _controller,
                 obscureText: true,
                 decoration: InputDecoration(
                   hintText: "Enter your Password",
@@ -39,7 +42,9 @@ class Day3 extends StatelessWidget {
                 ),
               ),
             ),
-            ElevatedButton(onPressed: (){}, child: Text("Submit"))
+            ElevatedButton(onPressed: (){
+              print(_controller.toString());
+            }, child: Text("Submit"))
           ],
         ),
       ),
