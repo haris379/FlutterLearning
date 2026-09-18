@@ -16,34 +16,17 @@ class Mytext extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textStyle = TextStyle(
-      fontSize: size,
-      color: color,
-      fontWeight: FontWeight.bold,
-    );
+    return Text(
 
-    final textPainter = TextPainter(
-      text: TextSpan(text: title, style: textStyle),
-      textDirection: TextDirection.ltr,
-    )..layout();
-
-    return SizedBox(
-      height: textPainter.height,
-      width: textPainter.width,
-      child: Stack(
-        children: [
-          Text(title, style: textStyle),
-          if (check)
-            Positioned(
-              top: textPainter.height / 2 - 1.2, // vertical center, minus half line thickness
-              left: 0,
-              child: Container(
-                height: 2.5,
-                width: textPainter.width,
-                color: color, // exact same color as text
-              ),
-            ),
-        ],
+      title,
+      style: TextStyle(
+        fontSize: size,
+        color: color,
+        fontWeight: FontWeight.bold,
+        decoration: check ? TextDecoration.lineThrough : TextDecoration.none,
+        decorationColor: color,
+        decorationThickness: 2.5,
+        decorationStyle: TextDecorationStyle.solid,
       ),
     );
   }
