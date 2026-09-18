@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simplefirstproject/Day2.dart';
 
 import 'Day1.dart';
 
@@ -11,6 +12,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Day1());
+    return MaterialApp(home: Day2());
   }
 }
