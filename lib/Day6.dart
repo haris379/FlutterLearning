@@ -47,7 +47,7 @@ class _Day6State extends State<Day6> {
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.orange,
+                          color: Color(0xFF2196F3),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         height: 50,
@@ -55,7 +55,7 @@ class _Day6State extends State<Day6> {
                         child: Center(
                           child: Text(
                             "Cancel",
-                            style: TextStyle(fontSize: 20, color: Colors.black),
+                            style: TextStyle(fontSize: 20, color: Colors.white),
                           ),
                         ),
                       ),
@@ -72,7 +72,7 @@ class _Day6State extends State<Day6> {
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.orange,
+                          color: Color(0xFF2196F3),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         height: 50,
@@ -80,7 +80,7 @@ class _Day6State extends State<Day6> {
                         child: Center(
                           child: Text(
                             "Add",
-                            style: TextStyle(fontSize: 20, color: Colors.black),
+                            style: TextStyle(fontSize: 20, color: Colors.white),
                           ),
                         ),
                       ),
