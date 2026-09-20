@@ -10,21 +10,19 @@ class Day6 extends StatefulWidget {
 }
 
 class _Day6State extends State<Day6> {
-  // bool isTracker = false;
-  // void onChanged() {
-  //   setState(() {
-  //     if (isTracker == false) {
-  //       isTracker = true;
-  //     } else {
-  //       isTracker = false;
-  //     }
-  //   });
-  // }
-
   void onChnaged(index) {
     setState(() {
       Notes[index][1] = !Notes[index][1];
     });
+  }
+
+  hello() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog();
+      },
+    );
   }
 
   List Notes = [
@@ -37,6 +35,13 @@ class _Day6State extends State<Day6> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            hello();
+          },
+          child: Icon(Icons.add),
+        ),
+
         appBar: AppBar(
           backgroundColor: Color(0xFF2196F3),
           title: Center(
