@@ -29,7 +29,7 @@ class _Day5State extends State<Day5> {
 
   List Notes = [
     ["Wakeup Early", false],
-    ["Do Flutter task", true],
+    ["Do Flutter task", false],
     ["Sleep Early", true],
   ];
 
