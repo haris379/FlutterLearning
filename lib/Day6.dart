@@ -66,6 +66,8 @@ class _Day6State extends State<Day6> {
                       onTap: () {
                         setState(() {
                           Notes.add([_controller.text.toString(), false]);
+                          _controller.clear();
+                          Navigator.pop(context);
                         });
                       },
                       child: Container(
@@ -96,7 +98,6 @@ class _Day6State extends State<Day6> {
   List Notes = [
     ["Wakeup Early", false],
     ["Do Flutter task", false],
-    ["Sleep Early", false],
   ];
 
   @override
