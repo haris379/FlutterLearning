@@ -5,7 +5,7 @@ class Mytext extends StatelessWidget {
     super.key,
     required this.title,
     this.size = 20,
-    this.color = Colors.black,
+    this.color = Colors.white,
     required this.check,
   });
 
