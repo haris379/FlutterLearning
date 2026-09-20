@@ -9,6 +9,8 @@ class Day6 extends StatefulWidget {
   State<Day6> createState() => _Day6State();
 }
 
+TextEditingController _controller = TextEditingController();
+
 class _Day6State extends State<Day6> {
   void onChnaged(index) {
     setState(() {
@@ -28,6 +30,7 @@ class _Day6State extends State<Day6> {
             child: Column(
               children: [
                 TextFormField(
+                  controller: _controller,
                   decoration: InputDecoration(
                     hintText: "Enter note",
                     border: OutlineInputBorder(
@@ -39,7 +42,7 @@ class _Day6State extends State<Day6> {
                 Row(
                   children: [
                     GestureDetector(
-                      onTap: (){
+                      onTap: () {
                         Navigator.pop(context);
                       },
                       child: Container(
@@ -59,17 +62,24 @@ class _Day6State extends State<Day6> {
                     ),
 
                     SizedBox(width: 30),
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.orange,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      height: 50,
-                      width: 100,
-                      child: Center(
-                        child: Text(
-                          "Add",
-                          style: TextStyle(fontSize: 20, color: Colors.black),
+                    GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          Notes.add([_controller.text.toString(), false]);
+                        });
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.orange,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        height: 50,
+                        width: 100,
+                        child: Center(
+                          child: Text(
+                            "Add",
+                            style: TextStyle(fontSize: 20, color: Colors.black),
+                          ),
                         ),
                       ),
                     ),
@@ -86,7 +96,7 @@ class _Day6State extends State<Day6> {
   List Notes = [
     ["Wakeup Early", false],
     ["Do Flutter task", false],
-    ["Sleep Early", true],
+    ["Sleep Early", false],
   ];
 
   @override
