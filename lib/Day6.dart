@@ -38,17 +38,22 @@ class _Day6State extends State<Day6> {
                 SizedBox(height: 30),
                 Row(
                   children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.orange,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      height: 50,
-                      width: 100,
-                      child: Center(
-                        child: Text(
-                          "Cancel",
-                          style: TextStyle(fontSize: 20, color: Colors.black),
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.pop(context);
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.orange,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        height: 50,
+                        width: 100,
+                        child: Center(
+                          child: Text(
+                            "Cancel",
+                            style: TextStyle(fontSize: 20, color: Colors.black),
+                          ),
                         ),
                       ),
                     ),
