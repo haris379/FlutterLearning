@@ -23,10 +23,11 @@ class _Day6State extends State<Day6> {
       context: context,
       builder: (context) {
         return AlertDialog(
+          backgroundColor: Color(0xFF2196F3),
           content: Container(
             height: 200,
             width: 200,
-            color: Colors.white,
+            color: Color(0xFF2196F3),
             child: Column(
               children: [
                 TextFormField(
@@ -35,6 +36,7 @@ class _Day6State extends State<Day6> {
                     hintText: "Enter note",
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
+                      borderSide: BorderSide(color: Colors.white),
                     ),
                   ),
                 ),
@@ -47,7 +49,7 @@ class _Day6State extends State<Day6> {
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Color(0xFF2196F3),
+                          color: Color(0xFF0D47A1),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         height: 50,
@@ -72,7 +74,7 @@ class _Day6State extends State<Day6> {
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Color(0xFF2196F3),
+                          color: Color(0xFF0D47A1),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         height: 50,
