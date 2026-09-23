@@ -31,7 +31,7 @@ class Todotile extends StatelessWidget {
               height: 70,
               width: 100,
 
-              child: Icon(Icons.remove),
+              child: Icon(Icons.delete),
             ),
           ),
         ],
