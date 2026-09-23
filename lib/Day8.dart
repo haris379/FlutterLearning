@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:simplefirstproject/ToDoTile.dart';
 import 'package:simplefirstproject/hello.dart';
+import 'ToDoTile2.dart';
 
 class Day8 extends StatefulWidget {
   Day8({super.key});
@@ -74,8 +74,11 @@ class _Day8State extends State<Day8> {
         body: ListView.builder(
           itemCount: Notes.length,
           itemBuilder: (context, index) {
-            return Todotile(
+            return Todotile2(
               value: Notes[index][1],
+              onDelete: () {
+                onDelete(index);
+              },
               onChanged: (p0) {
                 onChnaged(index);
               },
