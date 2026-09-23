@@ -24,6 +24,12 @@ class _Day7State extends State<Day7> {
     ["Do Flutter task", false],
   ];
 
+  onAdd() {
+    setState(() {
+      Notes.add([_controller.text.toString(), false]);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -33,7 +39,7 @@ class _Day7State extends State<Day7> {
             showDialog(
               context: context,
               builder: (context) {
-                return hello(controllerX: _controller);
+                return hello(controllerX: _controller, onAdd: () {});
               },
             );
           },
