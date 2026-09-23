@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class hello extends StatelessWidget {
-  const hello({super.key});
+  hello({super.key, required this.controllerX});
+
+  TextEditingController controllerX;
 
   @override
   Widget build(BuildContext context) {
@@ -48,9 +50,7 @@ class hello extends StatelessWidget {
 
                 SizedBox(width: 30),
                 GestureDetector(
-                  onTap: () {
-
-                  },
+                  onTap: () {},
                   child: Container(
                     decoration: BoxDecoration(
                       color: Color(0xFF0D47A1),
