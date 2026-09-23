@@ -1,0 +1,75 @@
+import 'package:flutter/material.dart';
+import 'package:simplefirstproject/MyText.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
+
+class Todotile2 extends StatelessWidget {
+  Todotile2({
+    super.key,
+    required this.value,
+    required this.onChanged,
+    required this.text,
+    required this.onDelete
+  });
+
+  bool value;
+  String text;
+
+  VoidCallback onDelete;
+  void Function(bool?)? onChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    return Slidable(
+      endActionPane: ActionPane(
+        motion: StretchMotion(),
+        children: [
+          Expanded(
+            child: GestureDetector(
+              onTap: (){
+                onDelete();
+              },
+              child: Container(
+                margin: EdgeInsets.only(right: 17),
+
+                decoration: BoxDecoration(
+                  color: Color(0xFF2196F3),
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                height: 70,
+                width: 100,
+
+                child: Icon(Icons.delete),
+              ),
+            ),
+          ),
+        ],
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Container(
+          decoration: BoxDecoration(
+            color: Color(0xFF0D47A1),
+            borderRadius: BorderRadius.circular(30),
+          ),
+          height: 70,
+          width: 415,
+          child: Row(
+            children: [
+              Checkbox(
+                activeColor: Colors.white,
+                checkColor: Colors.black,
+                value: value,
+                onChanged: onChanged,
+                shape: StadiumBorder(side: BorderSide()),
+              ),
+              Container(
+                margin: EdgeInsets.only(left: 60),
+                child: Mytext(title: text, check: value),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
