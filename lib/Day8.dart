@@ -30,8 +30,15 @@ class _Day8State extends State<Day8> {
       Navigator.pop(context);
     });
   }
-  onCancel(){
+
+  onCancel() {
     Navigator.pop(context);
+  }
+
+  onDelete(int index) {
+    setState(() {
+      Notes.removeAt(index);
+    });
   }
 
   @override
@@ -48,7 +55,7 @@ class _Day8State extends State<Day8> {
                   onAdd: () {
                     onAdd();
                   },
-                  onCancel: (){
+                  onCancel: () {
                     onCancel();
                   },
                 );

@@ -21,17 +21,22 @@ class Todotile extends StatelessWidget {
         motion: StretchMotion(),
         children: [
           Expanded(
-            child: Container(
-              margin: EdgeInsets.only(right: 17),
+            child: GestureDetector(
+              onTap: (){
 
-              decoration: BoxDecoration(
-                color: Color(0xFF2196F3),
-                borderRadius: BorderRadius.circular(30),
+              },
+              child: Container(
+                margin: EdgeInsets.only(right: 17),
+              
+                decoration: BoxDecoration(
+                  color: Color(0xFF2196F3),
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                height: 70,
+                width: 100,
+              
+                child: Icon(Icons.delete),
               ),
-              height: 70,
-              width: 100,
-
-              child: Icon(Icons.delete),
             ),
           ),
         ],
