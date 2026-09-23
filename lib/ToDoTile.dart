@@ -7,11 +7,11 @@ class Todotile extends StatelessWidget {
     super.key,
     required this.value,
     required this.onChanged,
-    required this.text,
-  });
+    required this.text,});
 
   bool value;
   String text;
+
   void Function(bool?)? onChanged;
 
   @override
@@ -22,9 +22,6 @@ class Todotile extends StatelessWidget {
         children: [
           Expanded(
             child: GestureDetector(
-              onTap: (){
-
-              },
               child: Container(
                 margin: EdgeInsets.only(right: 17),
               
