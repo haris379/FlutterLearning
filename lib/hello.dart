@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 class hello extends StatelessWidget {
-  hello({super.key, required this.controllerX, required this.onAdd});
+  hello({super.key, required this.controllerX, required this.onAdd, required this.onCancel});
 
   VoidCallback onAdd;
+  VoidCallback onCancel;
   TextEditingController controllerX;
 
   @override
@@ -31,7 +32,7 @@ class hello extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: () {
-                    Navigator.pop(context);
+                    onCancel();
                   },
                   child: Container(
                     decoration: BoxDecoration(
@@ -52,7 +53,6 @@ class hello extends StatelessWidget {
                 SizedBox(width: 30),
                 GestureDetector(
                   onTap: () {
-
                      onAdd();
                   },
                   child: Container(

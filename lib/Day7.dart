@@ -31,6 +31,9 @@ class _Day7State extends State<Day7> {
       Navigator.pop(context);
     });
   }
+  onCancel(){
+    Navigator.pop(context)
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -45,6 +48,9 @@ class _Day7State extends State<Day7> {
                   controllerX: _controller,
                   onAdd: () {
                     onAdd();
+                  },
+                  onCancel: (){
+                    onCancel();
                   },
                 );
               },
