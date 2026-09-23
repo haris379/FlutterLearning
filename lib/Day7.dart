@@ -32,7 +32,7 @@ class _Day7State extends State<Day7> {
     });
   }
   onCancel(){
-    Navigator.pop(context)
+    Navigator.pop(context);
   }
 
   @override
