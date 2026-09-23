@@ -39,7 +39,9 @@ class _Day7State extends State<Day7> {
             showDialog(
               context: context,
               builder: (context) {
-                return hello(controllerX: _controller, onAdd: () {});
+                return hello(controllerX: _controller, onAdd: () {
+                  onAdd();
+                });
               },
             );
           },
