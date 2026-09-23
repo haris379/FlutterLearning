@@ -17,19 +17,25 @@ class Todotile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Slidable(
+      endActionPane: ActionPane(
+        motion: StretchMotion(),
+        children: [
+          Expanded(
+            child: Container(
+              margin: EdgeInsets.only(right: 17),
 
-      endActionPane: ActionPane(motion: StretchMotion(), children: [
-        Expanded(
-          child: Container(
-            height: 70,
-            width: 100,
-            decoration: BoxDecoration(
-              color: Color(0xFF2196F3),
-              borderRadius: BorderRadius.circular(30)
+              decoration: BoxDecoration(
+                color: Color(0xFF2196F3),
+                borderRadius: BorderRadius.circular(30),
+              ),
+              height: 70,
+              width: 100,
+
+              child: Icon(Icons.remove),
             ),
           ),
-        )
-      ]),
+        ],
+      ),
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Container(
@@ -52,7 +58,6 @@ class Todotile extends StatelessWidget {
                 margin: EdgeInsets.only(left: 60),
                 child: Mytext(title: text, check: value),
               ),
-              
             ],
           ),
         ),
