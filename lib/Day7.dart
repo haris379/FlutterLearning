@@ -27,6 +27,8 @@ class _Day7State extends State<Day7> {
   onAdd() {
     setState(() {
       Notes.add([_controller.text.toString(), false]);
+      _controller.clear();
+      Navigator.pop(context);
     });
   }
 
@@ -39,9 +41,12 @@ class _Day7State extends State<Day7> {
             showDialog(
               context: context,
               builder: (context) {
-                return hello(controllerX: _controller, onAdd: () {
-                  onAdd();
-                });
+                return hello(
+                  controllerX: _controller,
+                  onAdd: () {
+                    onAdd();
+                  },
+                );
               },
             );
           },
