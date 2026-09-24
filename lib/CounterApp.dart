@@ -11,9 +11,26 @@ class _CounterappState extends State<Counterapp> {
   int variable = 0;
 
   @override
-  void Increment() {
+  void onIncrement() {
     setState(() {
       variable += 1;
+    });
+  }
+
+  void onDecrement() {
+    setState(() {
+      if (variable > 0) {
+        variable -= 1;
+      } else {
+        variable = 0;
+      }
+      ;
+    });
+  }
+
+  void onReset() {
+    setState(() {
+      variable = 0;
     });
   }
 
@@ -46,34 +63,36 @@ class _CounterappState extends State<Counterapp> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    // Increment
+                    // onIncrement
                     ElevatedButton(
                       onPressed: () {
-                        Increment();
+                        onIncrement();
                       },
-
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue,
                       ),
                       child: Text(
-                        "Increment",
+                        "onIncrement",
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
                     SizedBox(width: 20),
-                    // Decrement
+
+                    // onDecrement
                     ElevatedButton(
-                      onPressed: () {},
-
+                      onPressed: () {
+                        onDecrement();
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue,
                       ),
                       child: Text(
-                        "Decrement",
+                        "onDecrement",
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
                     SizedBox(width: 20),
+
                     // Reset
                     ElevatedButton(
                       onPressed: () {},
