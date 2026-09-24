@@ -61,7 +61,7 @@ class _CounterappState extends State<Counterapp> {
               SizedBox(height: 20),
               Center(
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     // onIncrement
                     ElevatedButton(
