@@ -11,6 +11,13 @@ class _CounterappState extends State<Counterapp> {
   int variable = 0;
 
   @override
+  void Increment() {
+    setState(() {
+      variable += 1;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
@@ -39,11 +46,34 @@ class _CounterappState extends State<Counterapp> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    ElevatedButton(onPressed: () {}, child: Text("Increment")),
+                    // Increment
+                    ElevatedButton(
+                      onPressed: () {
+                        Increment();
+                      },
+                      child: Text("Increment"),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blue,
+                      ),
+                    ),
                     SizedBox(width: 20),
-                    ElevatedButton(onPressed: () {}, child: Text("Decrement")),
+                    // Decrement
+                    ElevatedButton(
+                      onPressed: () {},
+                      child: Text("Decrement"),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blue,
+                      ),
+                    ),
                     SizedBox(width: 20),
-                    ElevatedButton(onPressed: () {}, child: Text("Reset")),
+                    // Reset
+                    ElevatedButton(
+                      onPressed: () {},
+                      child: Text("Reset"),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blue,
+                      ),
+                    ),
                   ],
                 ),
               ),
