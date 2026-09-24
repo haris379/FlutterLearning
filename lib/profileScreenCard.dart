@@ -18,13 +18,15 @@ class Profile extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Center(
-              child: Container(
+              child:
+              Container(
                 margin: const EdgeInsets.only(top: 30),
                 height: 100,
                 width: 100,
                 child: const CircleAvatar(
                   radius: 50,
                   backgroundColor: Colors.red,
+                  backgroundImage: AssetImage("assets/images/mypic.jpeg"),
                 ),
               ),
             ),
