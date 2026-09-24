@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:simplefirstproject/CounterApp.dart';
-import 'package:simplefirstproject/ProductCard.dart';
+import 'package:simplefirstproject/Greeting.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +10,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Counterapp());
+    return MaterialApp(home: Greeting());
   }
 }

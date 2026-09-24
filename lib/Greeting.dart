@@ -1,0 +1,15 @@
+import 'package:flutter/material.dart';
+
+class Greeting extends StatefulWidget {
+  const Greeting({super.key});
+
+  @override
+  State<Greeting> createState() => _GreetingState();
+}
+
+class _GreetingState extends State<Greeting> {
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold();
+  }
+}
