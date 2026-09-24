@@ -51,27 +51,39 @@ class _CounterappState extends State<Counterapp> {
                       onPressed: () {
                         Increment();
                       },
-                      child: Text("Increment"),
+
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue,
+                      ),
+                      child: Text(
+                        "Increment",
+                        style: TextStyle(color: Colors.white),
                       ),
                     ),
                     SizedBox(width: 20),
                     // Decrement
                     ElevatedButton(
                       onPressed: () {},
-                      child: Text("Decrement"),
+
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue,
+                      ),
+                      child: Text(
+                        "Decrement",
+                        style: TextStyle(color: Colors.white),
                       ),
                     ),
                     SizedBox(width: 20),
                     // Reset
                     ElevatedButton(
                       onPressed: () {},
-                      child: Text("Reset"),
+
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue,
+                      ),
+                      child: Text(
+                        "Reset",
+                        style: TextStyle(color: Colors.white),
                       ),
                     ),
                   ],
