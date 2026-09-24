@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:simplefirstproject/profileScreenCard.dart';
+import 'package:simplefirstproject/ProductCard.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,6 +10,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Profile());
+    return MaterialApp(home: ProductCard());
   }
 }
