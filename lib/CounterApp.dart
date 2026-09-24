@@ -72,7 +72,7 @@ class _CounterappState extends State<Counterapp> {
                         backgroundColor: Colors.blue,
                       ),
                       child: Text(
-                        "onIncrement",
+                        "Increment",
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
@@ -87,7 +87,7 @@ class _CounterappState extends State<Counterapp> {
                         backgroundColor: Colors.blue,
                       ),
                       child: Text(
-                        "onDecrement",
+                        "Decrement",
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
@@ -106,6 +106,7 @@ class _CounterappState extends State<Counterapp> {
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
+                    SizedBox(width: 20),
                   ],
                 ),
               ),
