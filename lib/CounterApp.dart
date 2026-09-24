@@ -95,8 +95,9 @@ class _CounterappState extends State<Counterapp> {
 
                     // Reset
                     ElevatedButton(
-                      onPressed: () {},
-
+                      onPressed: () {
+                        onReset();
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue,
                       ),
