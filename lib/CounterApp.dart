@@ -10,7 +10,6 @@ class Counterapp extends StatefulWidget {
 class _CounterappState extends State<Counterapp> {
   int variable = 0;
 
-  @override
   void onIncrement() {
     setState(() {
       variable += 1;
@@ -24,7 +23,6 @@ class _CounterappState extends State<Counterapp> {
       } else {
         variable = 0;
       }
-      ;
     });
   }
 
@@ -40,14 +38,12 @@ class _CounterappState extends State<Counterapp> {
       child: Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: Center(
-            child: const Text(
-              "Counter App",
-              style: TextStyle(
-                color: Colors.white70,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
+          title: const Text(
+            "Counter App",
+            style: TextStyle(
+              color: Colors.white70,
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
             ),
           ),
           backgroundColor: Colors.black,
