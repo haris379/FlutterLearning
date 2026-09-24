@@ -9,7 +9,7 @@ class Profile extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.yellow,
-          title: const Text("Practice Task"),
+          title: const Text("Profile Card"),
           centerTitle: true,
         ),
 
